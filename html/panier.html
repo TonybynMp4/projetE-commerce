@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CannettesEnFury</title>
-    <meta name="description" content="Vente de cannettes en ligne">
+    <title>CannettesEnFury - Panier</title>
     <link rel="stylesheet" href="../css/styles2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +12,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+</head>
 <body>
     <header>
         <nav>
-        <div class="leftheader">
-            <h1>CannettesEnFury</h1>
-            <input type="search" placeholder="Recherchez un article..." maxlength="200">
-        </div>
-        <a href="../index.html">Accueil</a>
-        <a href="#">Autres</a>
-        <a href="#">Contact</a>
-        <a href="#"><img src="../source/sac-de-courses.png" alt="" width="40px"></a>
+            <div class="leftheader">
+                <a href="../index.html">
+                    <h1>CannettesEnFury</h1>
+                </a>
+                <input type="search" placeholder="Recherchez un article..." maxlength="200">
+            </div>
+            <a href="../index.html">Accueil</a>
+            <a href="#">Autres</a>
+            <a href="#">Contact</a>
+            <a href="#"><img src="../source/sac-de-courses.png" alt="" width="40px"></a>
         </nav>
     </header>
     <h2>Votre Panier</h2>
     <main>
         <div class="container" id="cartItems">
+            <div class="total">
+                <h3>Total : </h3>
+                <p>0 €</p>
+            </div>
             <!-- Les articles du panier seront affichés ici -->
         </div>
         <button onclick="checkout()">Acheter</button>
