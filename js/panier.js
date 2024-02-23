@@ -4,42 +4,65 @@ window.onload = function () {
 
 function displayCartItems() {
   var cartContainer = document.getElementById("cartItems");
+  cartContainer.innerHTML = ""; // Efface le contenu précédent
 
-  // Efface d'abord le contenu précédent du panier
-  cartContainer.innerHTML = "";
-
-  // Récupérer les articles du panier depuis le stockage local
   var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-  // Créer le tableau pour afficher les articles
   var table = document.createElement("table");
   table.classList.add("cartTable");
 
-  // Créer l'en-tête du tableau
   var headerRow = table.insertRow();
-  var headers = ["Nom", "Quantité", "Prix unitaire", "Total"];
+  var headers = ["Nom", "Quantité", "Prix unitaire", "Total", "Actions"];
   headers.forEach(function (header) {
     var cell = headerRow.insertCell();
     cell.textContent = header;
   });
 
-  // Parcourir chaque article dans le panier et les ajouter au tableau
   cartItems.forEach(function (item, index) {
     var row = table.insertRow();
     var nameCell = row.insertCell();
     var quantityCell = row.insertCell();
     var priceCell = row.insertCell();
     var totalCell = row.insertCell();
+    var actionCell = row.insertCell(); // Cellule pour les actions comme supprimer
+    table.style.width = "90%"
+    table.style.margin = "0 auto 0 auto"
 
     nameCell.textContent = item.name;
     quantityCell.textContent = item.quantity;
     priceCell.textContent = "$" + item.price;
     totalCell.textContent = "$" + item.price * item.quantity;
+
+    
+    [nameCell, quantityCell, priceCell, totalCell].forEach(function(cell) {
+      cell.style.fontSize = "1.6em"; // Par exemple, pour une taille de police plus petite que celle des en-têtes
+      cell.style.fontFamily = "Lato"
+    });
+
+    // Créer un bouton de suppression
+    var deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Supprimer";
+    deleteBtn.style.backgroundColor = "#ff4d4d";
+    deleteBtn.style.width = "auto";
+    deleteBtn.style.height = "auto"
+    deleteBtn.style.backgroundColor.onclick = "#FFFFFF"
+    deleteBtn.style.margin = "0"
+    deleteBtn.onclick = function() {
+      removeFromCart(index);
+    };
+    actionCell.appendChild(deleteBtn);
   });
 
-  // Ajouter le tableau au conteneur du panier
   cartContainer.appendChild(table);
 }
+
+function removeFromCart(index) {
+  var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cartItems.splice(index, 1); // Supprime l'élément à l'index spécifié
+  localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Met à jour le stockage local
+  displayCartItems(); // Rafraîchit l'affichage du panier
+}
+
 
 function checkout() {
   // Logique de paiement
@@ -55,7 +78,7 @@ function addToCart(productId) {
     "#product" + productId + " .bottomproduct p"
   ).innerText;
   var priceMatch = productPriceText.match(/\$\d+(\.\d+)?/); // Recherche du prix dans le format "$X.XX"
-  var productPrice = priceMatch ? parseFloat(priceMatch[0].substring(1)) : 0; // Si le prix est trouvé, on l'extrait et le convertit en nombre flottant
+  var productPrice = priceMatch ; // Si le prix est trouvé, on l'extrait et le convertit en nombre flottant
 
   var item = {
     name: productName,
