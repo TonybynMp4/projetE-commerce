@@ -28,39 +28,15 @@
     </header>
     <h2>Votre Panier</h2>
     <main>
-        <div class="container">
-            <div class="total">
-                <h3>Total : </h3>
-                <p>130 €</p>
-            </div>
-            <div class="extracommande">
-                <p>Qt</p>
-                <p>Article(s)</p>
-                <p>Unit</p>
-                <p>Prix</p>
-            </div>
-            <div class="infoscommande">
-                <div class="quantity">
-                    <p>3</p>
-                </div>
-                <div class="article">
-                    <p>Oasis</p>
-                </div>
-                <div class="unité">
-                    <p>2</p>
-                </div>
-                <div class="total2">
-                    <p>130 €</p>
-                </div>
-                <div class="supprimer">
-                    <img src="../source/croix.png" alt="" width="20px">
-                </div>
-            </div>
+        <div class="container" id="cartItems">
+            <!-- Les articles du panier seront affichés ici -->
         </div>
-        <button onclick="deleteItem()">Acheter</button>
+        <button onclick="checkout()">Acheter</button>
     </main>
     <footer>
-        <p>&copy; 2020 E-Commerce Website</p>
+        <p>&copy; 2024 CannettesEnFury</p>
     </footer>
+
+    <script src="../js/panier.js"></script>
 </body>
 </html>

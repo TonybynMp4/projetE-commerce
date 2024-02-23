@@ -17,7 +17,9 @@
     <header>
         <nav>
             <div class="leftheader">
-                <h1>CannettesEnFury</h1>
+                <a href="index.html">
+                    <h1>CannettesEnFury</h1>
+                </a>
                 <input type="search" placeholder="Recherchez un article..." maxlength="200">
             </div>
             <a href="index.html">Accueil</a>
@@ -28,132 +30,113 @@
     </header>
 
     <main>
-        <div class="product">
+        <div class="product" id="product1">
             <h3>Élixir de Brise Tropicale</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
             <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
             <div class="bottomproduct">
                 <p>Price: $2</p>
                 <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
                 </div>
             </div>
         </div>
 
-        <div class="product">
-            <h3>Ambroisie des Îles</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Cette boisson pétillante capture l'essence même des îles lointaines avec ses arômes envoûtants de noix de coco et de vanille. Rafraîchissante et désaltérante, cette cannette offre un plaisir exotique à chaque gorgée, vous transportant mentalement vers des plages de sable blanc et des eaux cristallines.</p>
-            <div class="bottomproduct">
-                <p>Price: $1</p>
-                <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
-                </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <h3>Potion de Lueur Lunaire</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Une boisson unique en son genre, cette cannette combine des saveurs mystérieuses de baies sauvages et de fleurs nocturnes. Son éclat lumineux et sa saveur énigmatique éveillent vos sens, vous offrant une expérience de boisson magique sous le clair de lune. Sa formule riche en antioxydants vous aide à vous sentir rajeuni et revitalisé.</p>
-            <div class="bottomproduct">
-                <p>Price: $3</p>
-                <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
-                </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <h3>Nectar d'Étoile Filante</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Inspirée par les étoiles scintillantes dans le ciel nocturne, cette cannette éblouissante associe des fruits exotiques comme la goyave et le fruit de la passion pour créer une explosion de saveurs exquises. Son infusion pétillante et sa douceur tropicale vous offrent une sensation de bien-être céleste à chaque gorgée.</p>
-            <div class="bottomproduct">
-                <p>Price: $5</p>
-                <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
-                </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <h3>Frisson des Sables Dorés</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Cette boisson exotique associe habilement des saveurs de fruits de cactus et d'agrumes pour créer une expérience gustative rafraîchissante et stimulante. Sa texture désaltérante et son goût audacieux éveillent vos papilles, vous procurant une sensation de fraîcheur revigorante, parfaite pour les journées chaudes.</p>
-            <div class="bottomproduct">
-                <p>Price: $1.30</p>
-                <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
-                </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <h3>Éclat de Feuille de Palmier</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Inspirée par la beauté luxuriante des palmeraies, cette cannette offre une expérience gustative rafraîchissante avec ses arômes subtils de menthe et de concombre. Sa fraîcheur revigorante et son goût léger vous permettent de vous détendre et de vous ressourcer, vous laissant l'impression d'avoir pris une pause sous une brise tropicale.</p>
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
             <div class="bottomproduct">
                 <p>Price: $2</p>
                 <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
                 </div>
             </div>
         </div>
 
-        <div class="product">
-            <h3>Essence d'Oasis Étincelante</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Cette boisson énergisante est un mélange revitalisant de fruits exotiques et d'herbes fraîches, offrant une sensation de fraîcheur et de vitalité. Son équilibre parfait entre douceur et acidité vous procure une hydratation instantanée et une énergie durable pour affronter vos aventures quotidiennes.</p>
-                <div class="bottomproduct">
-                    <p>Price: $0.99</p>
-                    <div class="checkout">
-                        <input type="number" min="0" value="0">
-                        <img src="/source/panier.png" alt="panier" width="30px">
-                    </div>
-                </div>
-        </div>
-        <div class="product">
-            <h3>Délice d'Épices Éxotiques</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Cette cannette incarne l'essence des marchés animés et des cuisines exotiques avec son mélange audacieux d'épices et de fruits. Sa saveur épicée et sucrée éveille vos papilles et stimule vos sens, vous transportant dans un voyage gustatif exotique et inoubliable.</p>
-                <div class="bottomproduct">
-                <p>Price: $3</p>
-                <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
-                </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <h3>Potion de Rafraîchissement Arc-en-Ciel</h3>
-            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px">
-            </h2>
-                <p>Inspirée par la magie des arcs-en-ciel, cette boisson captivante combine une variété de fruits exotiques aux couleurs vives pour créer une explosion de saveurs et de couleurs dans chaque gorgée. Son mélange rafraîchissant et vitaminé vous offre une dose de bonheur instantané et une sensation de fraîcheur pétillante, parfaite pour égayer votre journée.</p>
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
             <div class="bottomproduct">
-                <p>Price: $1</p>
+                <p>Price: $2</p>
                 <div class="checkout">
-                    <input type="number" min="0" value="0">
-                    <img src="/source/panier.png" alt="panier" width="30px">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
                 </div>
             </div>
         </div>
 
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
+            <div class="bottomproduct">
+                <p>Price: $2</p>
+                <div class="checkout">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
+            <div class="bottomproduct">
+                <p>Price: $2</p>
+                <div class="checkout">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
+            <div class="bottomproduct">
+                <p>Price: $2</p>
+                <div class="checkout">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
+            <div class="bottomproduct">
+                <p>Price: $2</p>
+                <div class="checkout">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product1">
+            <h3>Élixir de Brise Tropicale</h3>
+            <h2><img src="/source/cannette_bleu.png" alt="image de l'article" width="50px"></h2>
+            <p>Cette cannette rafraîchissante contient un mélange unique de fruits tropicaux comme l'ananas, la mangue et la papaye. Sa saveur exotique vous transporte instantanément sur une île paradisiaque, tandis que ses vitamines naturelles vous revitalisent, vous donnant une énergie renouvelée pour affronter la journée.</p>
+            <div class="bottomproduct">
+                <p>Price: $2</p>
+                <div class="checkout">
+                    <input type="number" min="0" value="0" id="quantity_product1">
+                    <button onclick="addToCart('product1')">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Autres produits ici... -->
     </main>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
