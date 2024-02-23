@@ -85,7 +85,7 @@ main {
 .container {
     margin: 30px auto 20px auto;
     height: auto;
-    width: 40%;
+    width: 50%;
     background-color: rgb(212, 211, 211);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -164,4 +164,12 @@ button:active {
 footer {
     margin-top: 50px;
     text-align: center;
+}
+.deleteBtn {
+    background-color: #ff4d4d; /* Rouge clair */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 5px 10px; /* Padding */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur en forme de pointeur */
 }
