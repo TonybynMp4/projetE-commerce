@@ -123,3 +123,8 @@ input[type="number"] {
     transition: transform 0.4s ease-out;
     cursor: pointer;
 }
+
+button {
+    border: 0px;
+    background-color: whitesmoke;
+}
